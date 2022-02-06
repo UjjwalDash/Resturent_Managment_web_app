@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Resturent Managment System | Update Price</title>
+        
+        <link rel="stylesheet" href="static/home.css">
+        <link rel="stylesheet" href="static/update1.css">
+        
+    </head>
+    <body>
+        <header>
+            <h2>Resturent Managment System</h2>
+        </header>
+        <nav>
+            <div class="menu">
+                <ul>
+                    <li id ="book_box"><a href="index.html">Book</a></li>
+                    <li id="add_box"><a href="add.html">Add</a></li>
+                    <li id="update_box">
+                        <a href="#">Update</a>
+                        <div class="sub_menu">
+                            <ul>
+                                <li id="update_price"><a href="update_price.html">Update Price</a></li>
+                                <li id="update_image"><a href="update_image.html">Update Image</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li id ="delete_box"><a href="delete.html">Delete</a></li>
+                    <li id="show_box"><a href="show.html">Show</a></li>
+                </ul> 
+            </div>
+        </nav>
+        <main>
+            <p>
+                <h3 style="color:red">All required field are marked with *</h3>
+            </p>
+            <form method="get" action="update_pr">
+                <p>
+                    Food Name &ThickSpace;&ThickSpace;&ThickSpace;:*<input name="food_name" id="food_name" type="text" required>
+                </p>
+                <p>
+                   Updated Price :*<input name="food_price" id="food_price" type="number" required placeholder="in Rs">
+                </p>
+                <p>
+                    <div id="update_btn" style="padding-left: 12%;"><input id="update" value="Update" type="submit"></div>
+                </p>
+            </form>
+        
+    </body>
+</html>
