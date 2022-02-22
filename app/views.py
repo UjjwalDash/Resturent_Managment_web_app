@@ -1,7 +1,7 @@
 from pyexpat.errors import messages
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Item
+from .models import Item,filepath
 
 # Create your views here.
 def book(request):
@@ -17,6 +17,9 @@ def delete(request):
 def show(request):
     return render(request,'show.html')
 
+    
+def success(request):
+    return HttpResponse('successfully uploaded')
 
 
 
@@ -25,10 +28,10 @@ def insert(request):
     prod=Item()
     prod.food_name=request.GET['food_name']
     prod.food_price=request.GET['food_price']
-    print(request.FILES)
     prod.food_image=request.FILES['food_image']
+    print(prod.food_image)
     
     prod.save()
-    messages.success(request,"Item added succseefully")
+    return render(request,'add.html')
     
     
